@@ -55,6 +55,7 @@ function Header() {
           <li><Link to="/about">ABOUT</Link></li>
           <li><Link to="/services">SERVICES</Link></li>
           <li><Link to="/djPackages">DJ PACKAGES</Link></li>
+          <li><Link to="/rental">RENTAL</Link></li>
           <li><Link to="/reviews">REVIEWS</Link></li>
         </ul>
         <ul>
