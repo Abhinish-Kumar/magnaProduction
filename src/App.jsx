@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { useEffect } from 'react';
 import './App.css';
 import Home from './components/Home/Home';
@@ -18,10 +18,9 @@ import BesPokeStaging from './components/Services/BesPokeStaging/BesPokeStaging'
 import BesPokeBars from './components/Services/BespokeBars/BespokeBars';
 import Term from './components/Term/Term';
 
-
 //data-aos="fade-left"
-
 // data-aos="fade-right
+
 function App() {
   useEffect(() => {
     AOS.init({
@@ -41,12 +40,12 @@ function App() {
           <Route path="/reviews" exact element={<Reviews />} />
           <Route path="/services" exact element={<Services />} />
           <Route path="/liveEvents" exact element={<LiveEvents />} />
-          <Route path="/lightProduction" exact element={<LightProduction/>} />
-          <Route path="/danceFloor" exact element={<DanceFloor/>} />
-          <Route path="/ledWalls" exact element={<LedWalls/>} />
-          <Route path="/baspakeStaging" exact element={<BesPokeStaging/>} />
-          <Route path="/Bars" exact element={<BesPokeBars/>} />
-          <Route path="/copy-of-about-3" exact element={<Term/>} />
+          <Route path="/lightProduction" exact element={<LightProduction />} />
+          <Route path="/danceFloor" exact element={<DanceFloor />} />
+          <Route path="/ledWalls" exact element={<LedWalls />} />
+          <Route path="/baspakeStaging" exact element={<BesPokeStaging />} />
+          <Route path="/Bars" exact element={<BesPokeBars />} />
+          <Route path="/copy-of-about-3" exact element={<Term />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
