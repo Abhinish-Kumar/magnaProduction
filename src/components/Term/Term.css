@@ -1,0 +1,93 @@
+#term {
+            font-family:serif, Arial, sans-serif;
+            padding: 20px;
+            
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+           
+            letter-spacing: 0.5px; /* Adds slight spacing between letters */
+            word-spacing: 1px; /* Adds slight spacing between words */
+            line-height: 1.6; /* Ensures good readability */
+          }
+          
+          #term h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #444;
+            letter-spacing: 1px; /* Adds spacing between letters for titles */
+          }
+          
+          #term ol {
+            padding-left: 20px;
+          }
+          
+          #term li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            letter-spacing: 0.2px; /* Slight letter spacing for better readability */
+          }
+          
+          @media (max-width: 1200px) {
+            #term {
+              padding: 15px;
+            }
+          
+            #term h3 {
+              font-size: 1.75rem;
+              letter-spacing: 0.8px; /* Slightly adjust spacing for smaller screen */
+            }
+          }
+          
+          @media (max-width: 992px) {
+            #term {
+              padding: 10px;
+            }
+          
+            #term h3 {
+              font-size: 1.5rem;
+              letter-spacing: 0.6px; /* Adjusted letter spacing for medium screens */
+            }
+          
+            #term li {
+              margin-bottom: 12px;
+            }
+          }
+          
+          @media (max-width: 768px) {
+            #term {
+              padding: 1rem;
+            }
+          
+            #term h3 {
+              font-size: 1.25rem;
+              letter-spacing: 0.4px; /* Adjust spacing for smaller screens */
+            }
+          
+            #term ol {
+              padding-left: 15px;
+            }
+          
+            #term li {
+              margin-bottom: 10px;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            #term {
+              padding: .9rem;
+            }
+          
+            #term h3 {
+              font-size: 1.1rem;
+              letter-spacing: 0.2px; /* Even tighter letter spacing for mobile */
+            }
+          
+            #term li {
+              margin-bottom: 8px;
+              font-size: 0.9rem;
+              letter-spacing: 0.1px; /* Light letter spacing for mobile */
+            }
+          }
+          

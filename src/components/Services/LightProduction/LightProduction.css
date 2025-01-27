@@ -1,0 +1,180 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
+/* General container for all lightService cards */
+#lightProductionCOntainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -2rem;
+}
+
+/* Styles for each lightService card */
+.lightServices {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; 
+    background-color: #f9f9f9;
+    width: 100%; 
+    flex-wrap: wrap; 
+}
+
+/* Style for the image part */
+.lightServices div:last-child {
+    flex: 0 0 40%; 
+    max-width: 40%; 
+    position: relative;
+}
+
+/* Style for the text part */
+.lightServices div:first-child {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 15%;
+    flex-basis: 60%; 
+}
+
+/* Ensure both the image and text parts have proper height */
+.lightServices div {
+    overflow: hidden;
+    font-family:'Times New Roman', Times, serif, 'Inter', sans-serif; /* Updated to Inter for modern design */
+    font-size: 16px;
+    font-weight: 500; 
+    line-height: 1.8; /* Better readability */
+    color: #272626; 
+    text-align: left; 
+    letter-spacing: 0.5px; 
+    text-transform: none; 
+    word-wrap: break-word; 
+}
+
+/* Styling for the image */
+.lightServices img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+/* Style for the paragraph text */
+.lightServices p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Title for the lighting production section */
+.lightServices p:first-of-type {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Apply different order for even (left image, right text) */
+.lightServices:nth-child(even) {
+    background-color: rgb(230, 229, 229);
+    flex-direction: row-reverse; 
+}
+
+/* Apply different order for odd (left text, right image) */
+.lightServices:nth-child(odd) {
+    flex-direction: row; 
+}
+
+/* Additional adjustments for description text */
+.descLight p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Responsive text adjustments */
+@media (max-width: 1200px) {
+    .lightServices p {
+        font-size: 16px; 
+    }
+
+    .lightServices p:first-of-type {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .lightServices {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .lightServices div:first-child {
+        padding: 1rem; 
+        flex-basis: 100%; 
+    }
+
+    .lightServices div:last-child {
+        max-width: 100%; 
+        flex-basis: 100%; 
+        height: auto; 
+    }
+
+    .lightServices p {
+        font-size: 14px; 
+    }
+
+    .lightServices p:first-of-type {
+        font-size: 16px; 
+    }
+}
+
+@media (max-width: 768px) {
+    #imageContainerAbout h2 {
+        font-size: 2.5rem;
+    }
+
+    .lightServices p {
+        font-size: 12px; 
+    }
+
+    .lightServices p:first-of-type {
+        font-size: 14px; 
+    }
+
+    .lightServices div {
+        padding: 0.5rem; 
+    }
+
+    .lightServices div:last-child {
+        flex-basis: 50%; 
+    }
+
+    .lightServices div:first-child {
+        flex-basis: 50%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .lightServices p {
+        font-size: 11px; 
+    }
+
+    #imageContainerAbout h2 {
+        font-size: 2rem;
+    }
+
+    .lightServices p:first-of-type {
+        font-size: 12px; 
+    }
+
+    .lightServices div {
+        padding: 0.5rem; 
+    }
+
+    .lightServices div:last-child,
+    .lightServices div:first-child {
+        flex-basis: 100%; 
+    }
+
+    .lightServices {
+        padding: 10px; 
+    }
+}

@@ -1,0 +1,184 @@
+#imageContainerAbout {
+            position: relative;
+            font-family: 'Merriweather', serif;
+            width: 100%;
+            height: 54vh; /* Set the container height to 80vh */
+            overflow: hidden; /* Hide any part of the image that overflows */
+        }
+        /* Add a dark overlay */
+#imageContainerAbout::before {
+            content: ''; /* Required for the pseudo-element */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Adjust the opacity value to make it darker or lighter */
+            z-index: 1; /* Ensure it is on top of the image */
+        }
+        
+        #imageContainerAbout img {
+position: fixed;
+z-index: -10;
+            width: 100%;
+            height: 100%; /* Make the image cover the container height */
+            object-fit: cover; /* Ensures the image covers the container without stretching */
+            display: block;
+        }
+        
+        #imageContainerAbout h2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            z-index: 2;
+            font-size: 4rem; /* Larger font size for larger screens */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            padding: 0 1rem; /* Adds padding to prevent text from touching the edges on smaller screens */
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            #imageContainerAbout h2 {
+                font-size: 3.5rem; /* Slightly smaller but still large on tablets */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #imageContainerAbout h2 {
+                font-size: 3.5rem; /* Keep text large on mobile devices */
+                padding: 0 0.5rem; /* Adjust padding to fit text on small screens */
+            }
+        }
+        
+/* SECOND SECTION */
+        #contactAbout {
+            font-family: serif;
+            background-color: rgb(9 20 5); /* Green background */
+            text-align: center; /* Center the text */
+            padding: 30px; /* Add some padding for spacing */
+          }
+          
+          #contactAbout p:first-child {
+            padding-bottom: .5rem;
+            font-weight: 100; /* Slim font for the first paragraph */
+            color: white; /* White color for the text */
+            font-size: 1.1rem; /* Adjust the font size as needed */
+          }
+          
+          #contactAbout p:last-child {
+            font-weight: 900; /* Thick font for the second paragraph */
+            color: white; /* White color for the text */
+            font-size: 1.4rem; /* Adjust the font size as needed */
+          }
+
+          /* last  */
+          /* Global styles for the container */
+#welcomeAbout {
+    margin-bottom: -2rem;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction: column;
+            font-family: 'Roboto', sans-serif; /* Use a clean, modern font */
+            padding: 2rem;
+            text-align: center; /* Center the text inside */
+            background-color: #f4f4f4; /* Light background for better contrast */
+        }
+        
+        /* Small heading (first paragraph) */
+        #welcomeTitle {
+            font-size: 1.2rem;
+            font-weight: 300; /* Slim weight for a light look */
+            color: rgb(24 34 20);
+            margin-bottom: -1rem;
+        }
+        
+        /* Main heading (second paragraph) with underline */
+        #mainTitle {
+          
+           /* Bold font for emphasis */
+            color: rgb(24 34 20);
+            text-decoration: underline;
+            text-decoration-color: rgba(218, 7, 84, 0.818); /* Pink underline */
+            text-decoration-thickness: .1rem;
+            margin-bottom: 2.5rem;
+            text-underline-offset: 1rem;
+        }
+        
+        /* Tagline (third paragraph) styled like the first one */
+        #tagline {
+            font-size: 1rem;
+            font-weight: 300;
+            color: rgba(0, 0, 0);
+            margin-bottom: 2rem;
+            word-spacing: .4rem;
+            letter-spacing: .4rem;
+        }
+        
+        /* Blog post style */
+        .blog-post {
+          
+            padding: 1.5rem;
+         
+            border-radius: 8px;
+           width: 60%;
+            margin-bottom: -1rem;
+          
+        }
+        
+        .blog-post p {
+            font-family: 'Merriweather', serif;
+            word-spacing: .2rem;
+            letter-spacing: 0.07em;
+            line-height: 1.5;
+            font-size: .9rem;
+            color: #0b1607de;
+            margin-bottom: 1rem;
+        }
+        
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            #mainTitle {
+                font-size: 2rem; /* Adjust for tablets */
+            }
+            
+            #tagline {
+                font-size: 1.2rem; /* Adjust for tablets */
+            }
+            .blog-post{
+                        width: 100%;
+                        padding-left: 0px;
+                        padding-right: 0px;
+                        margin-left: 0px;
+                        padding-right: 0px;
+            }
+            .blog-post p {
+                font-size: 0.8.5rem; /* Smaller font for smaller devices */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #mainTitle {
+                font-size: 1.8rem; /* Adjust for small mobile screens */
+            }
+            
+            #tagline {
+                font-size: 1rem; /* Adjust for small mobile screens */
+            }
+            .blog-post{
+                        width: 100%;
+                        padding-left: 0px;
+                        padding-right: 0px;
+                        margin-left: 0px;
+                        padding-right: 0px;
+            }
+            .blog-post p {
+                font-size: 0.8rem; /* Smaller font for smaller screens */
+            }
+        }
+        
+          
+        

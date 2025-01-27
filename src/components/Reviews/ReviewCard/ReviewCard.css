@@ -1,0 +1,82 @@
+
+.reviewCard {
+            padding: 20px;
+            border-radius: 8px;
+            font-family: serif,'Roboto', sans-serif;
+            text-align: left;
+            max-width: 100%; /* Default to 80% for larger screens */
+            margin: 0 auto;
+            line-height: 1.6;
+          
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction: column;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+          }
+          
+          .reviewCard p {
+            margin: 0 0 15px;
+            color: #272626;
+            width: 60%;
+          }
+          .reviewCard p:nth-of-type(1)::before {
+            content: '“';
+            font-size: 3rem;
+            color: #ea2b9d;
+          }
+          
+          .reviewCard p:nth-of-type(1)::after {
+            content: '”';
+            font-size: 3rem;
+            color: rgb(61, 193, 237);
+            text-shadow: 2px 2px 2px 2px black;
+          }
+          
+          
+          
+         
+          
+          .author {
+            font-weight: bold;
+            color: #555;
+            font-style: italic;
+          }
+          
+          @media (max-width: 768px) {
+            /* On laptops and tablets (<= 768px) */
+            .reviewCard {
+
+            
+              max-width: 100%; /* 80% for laptops/tablets */
+            }
+          
+            .reviewCard p {
+              font-size: 14px;
+              width: 95%;
+            }
+          
+            .author {
+              font-size: 16px;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            /* On smartphones (<= 480px) */
+            .reviewCard {
+             
+              max-width: 100%; /* 95% for smartphones */
+            }
+          
+            .reviewCard p {
+              font-size: 12px;
+              width: 95%;
+
+            }
+          
+            .author {
+              font-size: 14px;
+            }
+          }
+          

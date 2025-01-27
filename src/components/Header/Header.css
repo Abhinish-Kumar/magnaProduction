@@ -1,0 +1,188 @@
+/* General reset for list and links */
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  font-family: serif;
+}
+
+
+
+ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            
+          }
+       
+          
+          nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+           
+            /* background: linear-gradient(135deg, #0c1629, #1b2d36, #022c55); */
+
+background-color: rgb(9 20 5);
+
+
+            padding: 15px;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          }
+          
+          nav .logo img{
+            height: 100%;
+ width: 120px;
+
+            
+          }
+          
+          nav ul {
+            display: flex; /* For large screens, links will be displayed horizontally */
+            gap: 15px;
+            margin: 0;
+          }
+          
+          nav ul li {
+            text-align: center;
+          }
+          
+          nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: block;
+            transition: background-color 0.3s;
+          }
+          
+          
+         
+          
+          /* Sidebar styles for small screens */
+          .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Sidebar hidden by default */
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            transition: left 0.3s ease-in-out;
+            padding-top: 60px;
+            z-index: 1000;
+            font-size: 13px;
+          }
+          
+          .sidebar ul {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+          }
+          
+          .sidebar li {
+            text-align: center;
+            margin: 20px 0;
+          }
+          
+          .sidebar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: block;
+            transition: background-color 0.3s;
+          }
+          
+          .sidebar a:hover {
+            background-color: #f39c12;
+          }
+          
+          /* Toggle Button */
+          .sidebar-toggle {
+            font-size: 28px;
+            cursor: pointer;
+            color: white;
+            z-index: 1100;
+            display: none; /* Initially hidden */
+          }
+          
+          .sidebar.open {
+            left: 0; /* Move the sidebar into view */
+          }
+          
+          /* Content Overlay */
+          .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            transition: opacity 0.3s;
+            z-index: 999;
+          }
+          
+          .overlay.active {
+            display: block;
+            opacity: 1;
+          }
+          
+          /* Responsive Styles for Small Screens */
+          @media (max-width: 768px) {
+            /* Show the sidebar toggle button on smaller screens */
+            .sidebar-toggle {
+              display: block;
+            }
+          
+            /* Navbar items should be hidden by default in mobile */
+            nav{
+              padding: 10px;
+            }
+            nav ul {
+              display: none; /* Hide the navbar items */
+            }
+          
+            /* Sidebar on smaller screens */
+            .sidebar {
+              left: -100%; /* Initially hidden */
+              width: 100%; /* Make sidebar full-width on small screens */
+            }
+          
+            .sidebar.open {
+              left: 0; /* Full-width sidebar when opened */
+            }
+          
+            .overlay.active {
+              display: block;
+              opacity: 1;
+            }
+          
+            /* Main navbar styles for small screens */
+            nav {
+              justify-content: space-between;
+              padding: 8px;
+            }
+          }
+          
+          #fb,#gram{
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: .3rem;
+          }
+        
+         
+          nav > ul:first-of-type li a:hover {
+            background-color: #f0f0f0; /* Example background */
+            /* Add more styles as needed */
+            color: rgb(0, 0, 0);
+          }
+          
+          

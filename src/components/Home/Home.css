@@ -1,0 +1,201 @@
+
+video{
+            width: 100%;
+            height: 100%;
+            
+            }
+            
+            
+            #video img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 10;
+
+            }
+            
+            video{
+             
+                width: 100%;
+                height: 100vh;
+                object-fit: cover; /* Ensures the video covers the viewport without distortion */
+            }
+
+
+            #imageContainer {
+              width: 100%;
+              display: grid;
+              overflow: hidden;
+              grid-template-columns: repeat(3, 33%); /* Default: 3 cards per row */
+              gap: 10px; /* Space between cards */
+              padding: 5px; /* Padding around the container */
+              box-sizing: border-box; /* Ensure padding doesn't affect container size */
+            }
+            
+            #imageContainer .Card {
+              box-sizing: border-box; /* Ensure padding doesn't overflow */
+              width: 100%; /* Ensure card takes up the full width available */
+              display: flex; /* This allows for better layout inside cards */
+              flex-direction: column; /* Organize content vertically inside each card */
+              position: relative
+            }
+            .Card div{
+              position:absolute;  
+              bottom: 0; 
+              left: 0;
+              padding: 1rem;
+              font-size: .8rem;
+              color: white;
+     }
+            
+            @media (max-width: 1024px) {
+              #imageContainer {
+                grid-template-columns: repeat(2, 48%); /* 2 cards per row on medium screens */
+              }
+            }
+            
+            @media (max-width: 600px) {
+              #imageContainer {
+                grid-template-columns: 1fr; /* 1 card per row on small screens */
+              }
+            }
+
+            /* split screen */
+            #splitGreet {
+              display: flex;
+              justify-content: space-between;
+            
+            }
+            
+            #left {
+              width: 100%;
+              height: 500px;
+              background-color: rgb(9 20 5);
+              position: relative;
+            
+              
+            }
+            #left div{
+              position: absolute;
+              right: 25%;
+              bottom: 40%;
+              display: flex;
+              flex-direction: column;
+              font-size: 3rem;
+              color: white;
+              font-family: serif;
+              letter-spacing: 2px;
+              
+            }
+           
+            #right {
+              background: #ffffff;
+              width: 100%;
+              color: #555; /* Softer text color */
+              font-family: Arial, sans-serif;
+              height: 500px;
+             position: relative;
+            }
+            
+            #right div{
+position: absolute;
+width: 50%;
+margin: 4rem;
+
+
+            }
+            #right p {
+              margin-bottom: 20px; /* Space between paragraphs */
+              font-size: 16px; /* Standard readable text size */
+              line-height: 1.6;
+            }
+            
+            #right p:first-of-type {
+              font-size: 24px; /* Larger text for "BOOK A FREE CONSULTATION" */
+              font-weight: bold;
+              color: #333; /* Darker color for the heading */
+            }
+            
+            #right p:last-of-type {
+              font-weight: bold; /* Bold "Whatsapp" text */
+              color: #0078D4; /* Add a distinct color for emphasis */
+            }
+            
+            @media (max-width: 1024px) {
+              #splitGreet {
+                flex-direction: column; /* Stack the left and right sections vertically on medium screens */
+                text-align: center;
+              }
+             #splitGreet #right{
+display:flex;
+justify-content:center;
+align-items:center;
+             }
+              #left, #right {
+                width: 100%;
+                margin-bottom: 20px; /* Add spacing between sections */
+              }
+            }
+            
+            @media (max-width: 600px) {
+              #left span {
+                font-size: 28px; /* Slightly smaller text on small screens */
+              }
+            
+              #right p {
+                font-size: 14px; /* Slightly smaller text on small screens */
+              }
+            }
+
+            
+            /*video container  */
+            #videos {
+              width: 100%;
+              display: grid;
+              overflow: hidden;
+              grid-template-columns: repeat(3, 33%); /* Default: 3 cards per row */
+              gap: 5px; /* Space between cards */
+              padding-top: 2px; /* Padding around the container */
+              box-sizing: border-box; /* Ensure padding doesn't affect container size */
+            }
+            
+            #videos .videoCard {
+              box-sizing: border-box; /* Ensure padding doesn't overflow */
+              width: 100%; /* Ensure card takes up the full width available */
+              display: flex; /* This allows for better layout inside cards */
+              flex-direction: column; /* Organize content vertically inside each card */
+              position: relative;
+              margin-bottom: -3px;
+              
+            }
+           
+            #videos .videoCard img{
+              width: 100%;
+            }
+            @media (max-width: 1024px) {
+              #videos {
+                grid-template-columns: repeat(2, 48%); /* 2 cards per row on medium screens */
+              }
+            }
+            
+            @media (max-width: 600px) {
+              #videos {
+                grid-template-columns: 1fr; /* 1 card per row on small screens */
+              }
+            }
+
+
+            #callUs{
+              width: 100%;
+              display:flex;
+              justify-content:center;
+              align-items:center;
+             background-color:  rgb(9 20 5);
+             color:hsl(0, 14%, 90%);
+             font-family: sans-serif;
+             letter-spacing: 2px;
+             padding: 1.5rem;
+           font-size: 1.5rem;
+font-weight: 200;
+            }

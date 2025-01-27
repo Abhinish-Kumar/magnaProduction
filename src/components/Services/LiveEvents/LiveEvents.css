@@ -1,0 +1,285 @@
+#events {
+    position: relative;
+    background-image: url("https://th.bing.com/th/id/OIP.3GBVmYmlLJC-c9V__yV1mwHaE8?w=600&h=400&rs=1&pid=ImgDetMain");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: serif, Arial, sans-serif;
+    margin-bottom: -2rem;
+    overflow-y: auto;
+    
+}
+
+#events::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.705);
+    z-index: 1;
+}
+
+#events > * {
+    z-index: 3;
+}
+
+#liveEventHeader {
+    background-color: #121212;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    margin: 50px auto;
+    font-family:serif, Arial, sans-serif;
+    animation: fadeInHeader 1.5s ease-in-out;
+    
+
+}
+
+@keyframes fadeInHeader {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#liveEventHeader h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    animation: slideInRight 1.5s ease-in-out forwards;
+   
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#liveEventHeader h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-top: 0;
+    animation: slideInLeft 1.5s ease-in-out forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#liveEvent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.eventWrapper {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.eventWrapper:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+}
+
+.eventContent {
+    /* padding: 2rem; */
+    text-align: center;
+}
+
+.eventContent h2 {
+    font-size: 1.5rem;
+    /* margin-bottom: 1rem; */
+    padding: .5rem;
+    font-family: serif;
+}
+
+.eventContent p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+ 
+}
+
+.eventImage {
+    position: relative;
+    cursor: pointer;
+}
+
+.eventImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.playIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    z-index: 2;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+#events .videoModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#events .videoModalContent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: #fff; */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#events .closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#events .videoModal video {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+    .eventWrapper {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .eventWrapper {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .eventWrapper {
+        width: 100%;
+    }
+
+    .eventContent h2 {
+        font-size: 1.5rem;
+    }
+
+    .eventContent p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .eventWrapper {
+        width: 90%;
+        margin: 0 auto; /* Center horizontally */
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .eventWrapper {
+        width: 100%;
+        margin: 0 auto; /* Ensure centering on the smallest screens */
+    }
+
+    .eventContent h2 {
+        font-size: 1.5rem;
+    }
+
+    .eventContent p {
+        font-size: 0.9rem;
+    }
+}
+
+.playIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem; /* Adjusted to make the icon smaller */
+    color: white;
+    z-index: 2;
+    border: 2px solid white;
+    opacity: 0.8;
+    pointer-events: none;
+    padding: 15px; /* Space around the icon */
+    border-radius: 50%; /* Circular shape */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Optional shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playIcon i { /* Ensure the icon is centered inside the circle */
+    font-size: 1.5rem; /* Small icon size */
+}
+

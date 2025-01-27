@@ -1,0 +1,151 @@
+#servicesBg {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+  font-family: serif;
+ 
+}
+
+#ServicesList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(3, auto); /* 3 rows */
+   /* Adds space between the cards */
+  max-width: 1000px; /* Keeps the grid content centered */
+  margin-left: auto;
+  margin-right: auto;
+  gap: .5rem;
+}
+#ServicesList div {
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Set aspect ratio for cards */
+  aspect-ratio: 2 / 1; /* General aspect ratio */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Aligns button and text at the bottom */
+}
+
+#ServicesList div::before {
+  content: ""; /* Required to generate the pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black shadow with some transparency */
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.7); /* Add an inner shadow effect */
+  z-index: 1; /* Ensure it's behind the text but on top of the background */
+}
+
+#ServicesList div h2,
+#ServicesList div button {
+  z-index: 2; /* Ensure that text and button appear above the pseudo-element */
+}
+
+
+#ServicesList div:nth-child(2), 
+#ServicesList div:nth-child(4), 
+#ServicesList div:nth-child(6) {
+  /* Adjust height for right column items (items 2, 4, 6) */
+  aspect-ratio: 7 / 10; /* Sets height to 0.7 of the width */
+}
+
+#ServicesList div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#ServicesList img {
+  width: 100%; /* Ensures image fills the full width of the container */
+  height: 100%; /* Ensures image fills the full height of the container */
+  object-fit: cover; /* Ensures image covers the container without distortion */
+}
+
+#ServicesList h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  bottom: 10px; /* Adjusted for left-bottom positioning */
+  left: 10px; /* Positioning from the left */
+  margin: 0;
+  padding: 0 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#ServicesList button {
+  font-size: 1rem;
+  background-color: transparent; /* Transparent button */
+  border: none; /* White border */
+  color: #fff; /* White text */
+  padding: 8px 16px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 10px; /* Position at the right bottom */
+  right: 10px; /* Adjusted for right-bottom positioning */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#ServicesList button:hover {
+  background-color: rgba(128, 128, 128, 0.349);
+}
+
+#ServicesList a {
+  text-decoration: none;
+  display: block; /* Make the entire div clickable */
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
+  #servicesBg {
+    padding: 30px 20px;
+  }
+
+  #ServicesList h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #servicesBg {
+    padding: 25px 15px;
+  }
+
+  #ServicesList h2 {
+    font-size: 1.1rem;
+  }
+  #servicesBg button{
+    visibility:hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  #servicesBg {
+    padding: 20px 10px;
+  }
+  #servicesBg button{
+    visibility:hidden;
+  }
+
+  #ServicesList {
+    grid-template-columns: 1fr; /* Stacks the columns on small screens */
+  }
+
+  #ServicesList h2 {
+    font-size: 1rem;
+  }
+}
+
+
+.bottom{
+  margin-bottom: -2rem;
+}

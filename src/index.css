@@ -1,0 +1,57 @@
+*{
+margin:0;
+padding:0;
+}
+*,*::before,*::after{
+box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+}
+#root{
+  min-width: 100%;
+}
+
+#header{
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+}
+html {
+            scroll-behavior: smooth;
+            width: 100%;
+          }
+         
+          /* Style for slim text */
+.slim-text {
+  font-family: 'Roboto', sans-serif; /* Clean sans-serif for a modern feel */
+  font-weight: 300; /* Light weight for slim appearance */
+  font-size: 2rem; /* Adjust font size as needed */
+/* Dark text color for good readability */
+  letter-spacing: 0.1em; /* Slight letter spacing for elegance */
+  line-height: 1.6; /* Better readability */
+  text-align: center; /* Center-aligned text */
+  text-transform: capitalize; /* Capitalize the first letter of each word */
+  
+  margin: 1rem; /* Add margin for spacing */
+}
+
+
+
+/* Make the text look even more beautiful with responsive design */
+@media (max-width: 768px) {
+  .slim-text {
+      font-size: 1.5rem; /* Smaller text size on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .slim-text {
+      font-size: 1.2rem; /* Even smaller text on mobile */
+  }
+}
+
+

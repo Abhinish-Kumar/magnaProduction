@@ -1,0 +1,197 @@
+/* #footer */
+
+#back{
+  /* background: url("https://th.bing.com/th/id/OIP.cM5XmUjRUmEzRA7k90epPAHaE8?w=1600&h=1067&rs=1&pid=ImgDetMain" ); */
+  /* clip-path: polygon(29% 0, 100% 10%, 100% 21%, 100% 100%, 0 100%, 60% 95%, 0 100%, 0 14%, 11% 9%); */
+}
+#footer {
+            width: 100%;
+            height: auto;
+           
+            /* background: linear-gradient(135deg, #0a1322, #475d69, #001932);background: linear-gradient(135deg, #0a1322, #475d69, #001932); */
+background-color: rgb(9 20 5);
+
+
+/* background: linear-gradient(135deg, #0a1322, #475d69, #001932), url("https://th.bing.com/th/id/OIP.O8q7feQfTtxQa1OhdvrelQHaEJ?w=626&h=351&rs=1&pid=ImgDetMain"); */
+background-size: cover; /* Adjust this if needed to control image scaling */
+background-position: center; /* Optional: Centers the image */
+
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 3rem;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            font-size: 13px;
+            /* clip-path: polygon(29% 0, 100% 10%, 100% 21%, 100% 100%, 0 100%, 60% 95%, 0 100%, 0 14%, 11% 9%); */
+          }
+          
+          #footer div {
+            flex: 1;
+            min-width: 250px; /* Ensure responsiveness */
+            margin: 1rem;
+            padding: 1rem;
+           
+          }
+          
+          #footer h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #ffffff; /* Gold color for accent */
+          }
+          
+          #footer h3 {
+            font-size: 1rem;
+            font-weight: normal;
+            color: #E67E22; /* Slightly lighter gold */
+            margin-top: -0.5rem;
+          }
+          
+          #footer p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0.5rem 0;
+          }
+          
+          #footer span {
+            font-size: 1rem;
+            color: #ECF0F1; /* Light grey */
+            cursor: pointer;
+            display: block;
+            margin-top: 0.5rem;
+          }
+          
+          #footer div:nth-child(3) h1 {
+            margin: 0.5rem 0;
+          }
+          
+          #footer div:nth-child(3) h1:hover {
+            color: #F39C12; /* Gold hover effect for social media links */
+          }
+          
+          #footer div:nth-child(3) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          
+          #footer div:nth-child(3) .icon {
+            /* color: red; */
+            width: 40px;
+            height: 40px;
+            margin-left: 0.5rem;
+            border-radius: 0.5rem;
+          }
+          
+          #fb {
+            color: rgb(13, 70, 228);
+            background-color: white;
+          }
+          
+          #tube {
+            color: rgb(209, 15, 15);
+            background-color: white;
+          }
+          
+          #gram {
+            color: rgb(222, 18, 123);
+            background-color: white;
+          }
+          
+          #footer div:nth-child(2) {
+            text-align: center;
+            font-family: serif;
+          }
+          
+          @media (max-width: 768px) {
+            #footer {
+              padding: 2rem;
+              flex-direction: column;
+              align-items: center;
+            }
+            #footer div {
+              text-align: center;
+              margin: 1rem 0;
+            }
+          }
+          
+          /* star rating */
+          #starRatingBlock {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+          }
+          
+          #starRatingBlock > div {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 400px; /* Adjust as needed */
+            transition: transform 0.3s ease-in-out;
+          }
+          
+          #starRatingBlock > div:hover {
+            transform: translateY(-5px);
+          }
+          
+          #starRatingBlock h1 {
+            font-family: 'Arial', sans-serif;
+            color: #2c3e50;
+            font-size: 18px;
+            margin-bottom: 10px;
+            line-height: 1.4;
+          }
+          
+          #starRatingBlock span {
+            color: #f39c12;
+            font-size: 20px;
+          }
+          
+          #starRatingBlock p {
+            font-family: 'Georgia', serif;
+            color: #1d2c3b;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 15px 0;
+          }
+          
+          #starRatingBlock h4 {
+            font-family: 'Arial', sans-serif;
+            color: #526162;
+            font-size: 16px;
+            margin-top: 10px;
+          }
+          
+          /* Make sure the layout is responsive */
+          @media (max-width: 768px) {
+            #starRatingBlock {
+              flex-direction: column;
+              align-items: center;
+            }
+          
+            #starRatingBlock > div {
+              max-width: 100%;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            #starRatingBlock h1 {
+              font-size: 16px;
+            }
+          
+            #starRatingBlock p {
+              font-size: 14px;
+            }
+          
+            #starRatingBlock h4 {
+              font-size: 14px;
+            }
+          }
+          
